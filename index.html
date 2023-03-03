@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc for Structs</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style/style.css">
+
+    <script src="https://kit.fontawesome.com/e21675626d.js" crossorigin="anonymous"></script>
+
+    <link rel="shortcut icon" href="Imagens/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header class="titulo">
+        <h1>Calculo para Formação de Estruturas</h1>
+    </header>
+    <main>
+        <section class="calculos">
+            <div class="calcLinear">
+                <h2 class="calcTitulo">Linear</h2>
+                <div class="calcDescricao">
+                    <p>* O Calculo "LINEAR" é para peças com medidas lineares (Metros). Tubos em aço inox ou carbono, barra de aço ou plásticos (Poliacetal, PP), barras roscadas, entre outros. </p>
+                </div>
+                <section class="calc">
+                    <div class="calcBruto">
+                        <label for="comprimentoBruto">Comprimento Bruto (mm):</label>
+                        <input class="valorParaCalculoLinear" data-type="comprimentoBruto" type="number" name="comprimentoBruto" id="comprimentoBrutoLinear" data-calc="linear" placeholder="Milimetros (mm)">    
+                    </div>
+                    <div class="calcLiquido">
+                        <label for="comprimentoLinear">Comprimento Produto (PI) (mm):</label>
+                        <input class="valorParaCalculoLinear" data-type="comprimentoLiquido"  type="number" name="comprimentoLinear" id="comprimentoLiquidoLinear" data-calc="linear" placeholder="Milimetros (mm)">
+                        <div class="valorAdicional">
+                            <div>
+                                <input class="checkbox" type="checkbox" name="corte3mm" id="checkboxCorte3mm" data-check="checkboxCorte3mm" value="0.003">
+                                <label for="corte3mm">+ 3mm corte (Serra/Bedame)</label>
+                                
+                            </div>
+                            <div>
+                                <input class="checkbox" type="checkbox" name="pegaCastanha" id="pegaCastanha" data-check="pegaCastanha" value="0.04">
+                                <label for="pegaCastanha">+ 40mm Castanha (Torno)</label>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="resultado">
+                        <h3>Resultado (m)</h3>
+                        <div class="valoresResultado">
+                            <div>
+                                <label for="valorBruto">Valor Bruto:</label>
+                                <div name="valorBruto" id="valorBrutoLinear">
+                                    0,00
+                                </div> 
+                            </div>
+                            <div class="valorLiquidoLinear">
+                                <label for="valorLiquido">Valor Liquido:</label>
+                                <div name="valorLiquido"  id="valorLiquidoLinear">
+                                0,00
+                                </div>
+                            </div>
+                            <div class="numeroPecas">
+                                <label for="numeroDePecas">Número de Peças:</label>
+                                <div name="numeroDePecas"  id="numeroDePecas">
+                                0
+                                </div>
+                            </div>
+                            <div class="percentualPerdas">
+                                <span class="material-symbols-outlined" title= 'No sistema "Ocean" o pertual de perdas tem como base o valor informado na estrutura do produto, ou seja "Valor Liquido"'>info</span>
+                                <label for="percentualPerdas">Percentual de Perdas: </label>
+                                <div name="percentualPerdas"  id="percentualPerdas">
+                                0,0%
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </section>
+                <div class="buttonCalcular">
+                    <button class="button buttonShow" data-show="open">Calcular</button>
+                    <button class="button buttonShow exitshow" data-show="exit">Fechar</button>
+                </div>
+            </div>
+            <hr>
+            <div class="calcMetrosQuadrados">
+                <h2 class="calcTitulo">Metros Quadrados</h2>
+                <div class="calcDescricao">
+                    <p>* O Calculo "METROS QUADRADOS" é para produtos com unidade de medidas em M², como chapas de papelão, MDF, compensados, courvin, espumas entre outros. </p>
+                </div>
+                <section class="calc">
+                    <div class="calcBruto">
+                        <label for="comprimentoBrutoMQ">Comprimento Bruto (mm):</label>
+                        <input class="valorParaCalculoMQ" type="number" name="comprimentoBrutoMQ" id="comprimentoBrutoMQ" placeholder="Milimetros (mm)" data-type="comprimentoBrutoMQ">
+                        <label for="larguraBrutoMQ">Largura Bruto (mm):</label>
+                        <input class="valorParaCalculoMQ" type="number" name="larguraBrutoMQ" id="larguraBrutoMQ" placeholder="Milimetros (mm)" data-type="larguraBrutoMQ">
+                    </div>
+                    <div class="calcLiquido">
+                        <label for="comprimentoLiquidoMQ">Comprimento Liquido (mm):</label>
+                        <input class="valorParaCalculoMQ" type="number" name="comprimentoLiquidoMQ" id="comprimentoLiquidoMQ" placeholder="Milimetros (mm)" data-type="comprimentoLiquidoMQ">
+                        <label for="larguraLiquidoMQ">Largura Liquido (mm):</label>
+                        <input class="valorParaCalculoMQ" type="number" name="larguraLiquidoMQ" id="larguraLiquidoMQ" placeholder="Milimetros (mm)" data-type="larguraLiquidoMQ">
+                    </div>
+                    <div class="resultado">
+                        <h3>Resultados (m)</h3>
+                        <div class="valoresResultado">
+                            <div>
+                                <label for="valorBruto">Valor Bruto:</label>
+                                <div name="valorBruto" id="valorBrutoMQ">
+                                    0,00
+                                </div> 
+                            </div>
+                            <div class="valorLiquidoLinear">
+                                <label for="valorLiquido">Valor Liquido:</label>
+                                <div name="valorLiquido"  id="valorLiquidoMQ">
+                                0,00
+                                </div>
+                            </div>
+                            <div class="numeroPecasMQ">
+                                <h4>Plano de Corte 1</h4>
+                                <div>
+                                    <label for="numeroDePecas">N° de Peças:</label>
+                                    <div name="numeroDePecas"  id="numeroDePecasMQ1">
+                                    0
+                                    </div>
+                                </div>
+                                <div class="percentualPerdas">
+                                    <span class="material-symbols-outlined" title= 'No sistema "Ocean" o pertual de perdas tem como base o valor informado na estrutura do produto, ou seja "Valor Liquido"'>info</span>
+                                    <label for="percentualPerdas">Percentual de Perdas: </label>
+                                    <div name="percentualPerdas"  id="percentualPerdasMQ1">
+                                    0,0%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="numeroPecasMQ">
+                                <h4>Plano de Corte 2</h4>
+                                <div>
+                                    <label for="numeroDePecas">N° de Peças:</label>
+                                    <div name="numeroDePecas"  id="numeroDePecasMQ2">
+                                    0
+                                    </div>
+                                </div>
+                                <div class="percentualPerdas">
+                                    <span class="material-symbols-outlined" title= 'No sistema "Ocean" o pertual de perdas tem como base o valor informado na estrutura do produto, ou seja "Valor Liquido"'>info</span>
+                                    <label for="percentualPerdas">Percentual de Perdas: </label>
+                                    <div name="percentualPerdas"  id="percentualPerdasMQ2">
+                                    0,0%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="numeroPecasMQ">
+                                <h4>Plano de Corte Alternativo</h4>
+                                <div>
+                                    <label for="numeroDePecasAltMQ">N° de Peças:</label>
+                                    <input type="number" name="numeroDePecasAltMQ" id="numeroDePecasAltMQ" placeholder="N°(UN)" data-type="numeroDePecasAltMQ">
+                                </div>
+                                <div class="percentualPerdas">
+                                    <span class="material-symbols-outlined" title= 'No sistema "Ocean" o pertual de perdas tem como base o valor informado na estrutura do produto, ou seja "Valor Liquido"'>info</span>
+                                    <label for="percentualPerdasMQAlt">Percentual de Perdas: </label>
+                                    <div name="percentualPerdasMQAlt"  id="percentualPerdasMQAlt">
+                                    0,0%
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </section>
+                <div class="buttonCalcular">
+                    <button class="button buttonShow" data-show="open">Calcular</button>
+                    <button class="button buttonShow exitshow" data-show="exit">Fechar</button>
+                </div>
+            </div>
+            <hr>
+            <div class="calcMetrosCubicos">
+                <h2 class="calcTitulo">Metros Cúbicos</h2>
+                <div class="calcDescricao">
+                    <p>* O Calculo "METROS CÚBICOS" é para produtos com unidade de medidas em M³, exemplo: Madeira. </p>
+                </div>
+                <section class="calc">
+                    <div class="calcBruto">
+                        <label for="comprimentoBrutoMC">Comprimento Bruto (mm):</label>
+                        <input class="valorParaCalculoMC" type="number" name="comprimentoBrutoMC" id="comprimentoBrutoMC" placeholder="Milimetros (mm)" data-type="comprimentoBrutoMC">
+                        <label for="larguraBrutoMC">Largura Bruto (mm):</label>
+                        <input class="valorParaCalculoMC" type="number" name="larguraBrutoMC" id="larguraBrutoMC" placeholder="Milimetros (mm)" data-type="larguraBrutoMC">
+                        <label for="alturaBrutoMC">Altura Bruto (mm):</label>
+                        <input class="valorParaCalculoMC" type="number" name="larguraBrutoMC" id="alturaBrutoMC" placeholder="Milimetros (mm)" data-type="alturaBrutoMC">
+                    </div>
+                    <div class="calcLiquido">
+                        <label for="comprimentoLiquidoMC">Comprimento Liquido (mm):</label>
+                        <input class="valorParaCalculoMC" type="number" name="comprimentoLiquidoMC" id="comprimentoLiquidoMC" placeholder="Milimetros (mm)" data-type="comprimentoLiquidoMC">
+                        <label for="larguraLiquidoMC">Largura Liquido (mm):</label>
+                        <input class="valorParaCalculoMC" type="number" name="larguraLiquidoMC" id="larguraLiquidoMC" placeholder="Milimetros (mm)" data-type="larguraLiquidoMC">
+                        <label for="alturaLiquidoMC">Altura Liquido (mm):</label>
+                        <input class="valorParaCalculoMC" type="number" name="alturaLiquidoMC" id="alturaLiquidoMC" placeholder="Milimetros (mm)" data-type="alturaLiquidoMC">
+                    </div>
+                    <div class="resultado">
+                        <h3>Resultado (m)</h3>
+                        <div class="valoresResultado">
+                            <div>
+                                <label for="valorBrutoMC">Valor Bruto:</label>
+                                <div name="valorBrutoMC" id="valorBrutoMC">
+                                    0,00
+                                </div> 
+                            </div>
+                            <div class="valorLiquidoMC">
+                                <label for="valorLiquidoMC">Valor Liquido:</label>
+                                <div name="valorLiquidoMC"  id="valorLiquidoMC">
+                                0,00
+                                </div>
+                            </div>
+                            <div class="numeroPecasMQ">
+                                <h4>Plano de Corte</h4>
+                                <div class="numeroPecas">
+                                    <label for="numeroDePecasMC">Número de Peças (Comprimento):</label>
+                                    <div name="numeroDePecasMC"  id="numeroDePecasMC">
+                                    0
+                                    </div>
+                                </div>
+                                <div class="percentualPerdasMC">
+                                    <span class="material-symbols-outlined" title= 'No sistema "Ocean" o pertual de perdas tem como base o valor informado na estrutura do produto, ou seja "Valor Liquido"'>info</span>
+                                    <label for="percentualPerdasMC">Percentual de Perdas: </label>
+                                    <div name="percentualPerdasMC"  id="percentualPerdasMC">
+                                    0,0%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="numeroPecasMQ">
+                                <h4>Plano de Alternativo</h4>
+                                <div class="numeroPecas">
+                                    <label for="numeroDePecasMCAlt">Número de Peças:</label>
+                                    <input type="number" name="numeroDePecasMCAlt" id="numeroDePecasMCAlt" placeholder="N°(UN)" data-type="numeroDePecasMCAlt">
+                                </div>
+                                <div class="percentualPerdasMC">
+                                    <span class="material-symbols-outlined" title= 'No sistema "Ocean" o pertual de perdas tem como base o valor informado na estrutura do produto, ou seja "Valor Liquido"'>info</span>
+                                    <label for="percentualPerdasMC">Percentual de Perdas: </label>
+                                    <div name="percentualPerdasMCAlt"  id="percentualPerdasMCAlt">
+                                    0,0%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="buttonCalcular">
+                    <button class="button buttonShow" data-show="open">Calcular</button>
+                    <button class="button buttonShow exitshow" data-show="exit">Fechar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div></div>
+    <footer>
+        <a href="https://github.com/andrelzlima7" title="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/andr%C3%A9-luiz-de-lima-66958319b" title="Linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <div>Versão 1.0</div>
+    </footer>
+    <script src="main.js"></script>
+    
+</body>
+</html>
