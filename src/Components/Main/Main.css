@@ -1,0 +1,14 @@
+.main{
+    
+    margin: 0;
+    padding: 2rem;
+    color: #17212F;
+}
+
+.main > section{
+    background-color: #ececec;
+    border: 1px solid #ECECEC;
+    border-radius: 1rem;
+    padding: 2rem;
+    height: 90%;
+}

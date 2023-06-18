@@ -1,0 +1,105 @@
+.header{
+    background-color: #17212F;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.header:nth-child(1){
+    text-align: left;
+}
+
+.header .imgArk{
+    text-align: right;
+    font-size: 1.5rem;
+    margin-right: 2rem;
+}
+
+.header .imgArk a{
+    margin: 1rem;
+    color: #FFFFFF;
+}
+
+.hiMenu{
+    color: #FFFFFF;
+    font-size: 2rem;
+    display: inline-flex;
+    vertical-align: middle;
+    margin: 0 2rem;
+    cursor: pointer;
+}
+
+.header h1{
+    color: #FFFFFF;
+    display: inline-flex;
+    font-size: 1rem;
+    vertical-align: middle;
+    margin: 0 2rem;
+}
+
+.header .headerSearch{
+    border: none;
+    width: 30rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    text-indent: 1.5rem;
+    margin: 0 2rem;
+}
+
+.header .headerSearch:focus{
+    outline: none;
+}
+
+.header .headerSearch::placeholder{
+    background-image: url('../../../public/magnifying-glass.svg');
+    background-repeat: no-repeat;
+}
+
+.header img{
+    border-radius: 50%;
+    width: 3rem;
+    vertical-align: middle;
+    text-align: right;
+    margin: 0 2rem;
+}
+
+@media (max-width: 1700px) {
+    .header{
+        display: grid;
+        grid-template-columns: 10fr 1fr;
+    }
+
+    .header .headerSearch{
+        width: 20rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .header{
+        display: grid;
+        grid-template-columns: 10fr 1fr;
+    }
+
+    .header .headerSearch{
+        display: none;
+    }
+
+    .header h1{
+        margin: 0 1rem;
+        font-size: 0.8rem;
+    }
+
+    .header img{
+        border-radius: 50%;
+        width: 2rem;
+        vertical-align: middle;
+        text-align: right;
+        margin: 0 1rem;
+    }
+
+    .hiMenu{
+        font-size: 1rem;
+        margin: 0 1rem;
+    }
+}

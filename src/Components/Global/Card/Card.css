@@ -1,0 +1,58 @@
+.card{
+    background-color: #fafafa;
+    border: 1px solid #BBBBBB;
+    box-shadow: 0.5px 0.5px 5px rgba(0,0,0,.12);
+    border-radius: 1rem;
+    width: 12rem;
+    height: 16rem;
+    padding: 1rem;
+}
+
+.cardAtivo{
+    border: 1px solid #689F38;
+}
+
+.card h3{
+    margin: 0;
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.card p{
+    font-size: .8rem;
+    height: 5rem;
+}
+
+.card span{
+    font-size: 2rem;
+}
+
+.card .BsCalculator{
+    color: #689F38;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+@media (max-width: 850px) {
+    .card{
+        margin: 0.5rem auto;
+        width: 10rem;
+        height: 13rem;
+        padding: 0.8rem;
+    }
+
+    .card h3{
+        margin: 0;
+        font-size: 0.8rem;
+        margin: 0.8rem;
+    }
+    
+    .card p{
+        font-size: .7rem;
+        height: 5rem;
+    }
+    
+    .card span{
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,22 @@
+.button {
+    display: block;
+    border-radius: 0.3rem;
+    box-shadow: 0.5px 0.5px 5px rgba(0,0,0,.08);
+    border: none;
+    background-color: #fbc02d;
+    color: #ffffff;
+    font-weight: bolder;
+    margin: 1rem auto;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.button:hover{
+    background-color: #689F38;
+}
+
+@media (max-width: 1330px) {
+    .button{
+        display: none;
+    }
+}

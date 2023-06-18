@@ -1,0 +1,24 @@
+.areaCalculo > div{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+}
+
+.areaCalculo .areaCalculosCards{
+    display: inline-flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+@media (max-width: 1780px) {
+    .areaCalculo > div{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 850px) {
+    .areaCalculo .areaCalculosCards{
+        display: block;
+    }
+}
